@@ -27,7 +27,7 @@ main() {
       for(var i = 0; i <= 6; i++) //check vertical counters
       {
         temp = myGrid[i].join();
-        if (temp.search(player+','+player+','+player+','+player) > 0) won = true;
+        if (temp.lastIndexOf(player+','+player+','+player+','+player) > 0) won = true;
       }
 
       temp = '';
@@ -38,7 +38,7 @@ main() {
           if ((i % 7) == 0) temp += '\r\n';
           temp += myGrid[i][j];
         }
-      if (temp.search(player+''+player+''+player+''+player) > -1) won = true;
+      if (temp.lastIndexOf(player+''+player+''+player+''+player) > -1) won = true;
 
       temp = '';
 
@@ -245,9 +245,13 @@ main() {
       context.fillRect(xoffset-8,countW*7+yoffset,countW*7+16,20);
       context.strokeRect(xoffset-8,countW*7+yoffset,countW*7+16,20);
 
-      document.onMouseMove = drawCounter;
-      document.onClick = dropCounter;
+      document.onMouseMove;
+        drawCounter;
+
+      document.onClick;
+      dropCounter;
     }
 
-    window.onLoad= initGrid;
+    window.onLoad;
+    initGrid;
 }
